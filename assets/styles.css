@@ -400,3 +400,6 @@ section[id] { scroll-margin-top: var(--header-h); }
   .js .reveal { opacity: 1; transform: none; }
   .bar-fill { transform: scaleX(1); }
 }
+
+/* Hero headline highlight (brand green) */
+.hl { color: var(--brand); }
