@@ -43,16 +43,29 @@
         <img class="logo-mark" src="assets/img/logo-96.png" alt="" width="36" height="36" />
         <span class="logo-word">FinSave</span>
       </a>
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <ul>
+          <li><a href="#home" class="nav-link is-active" aria-current="true" data-i18n="nav.home">Home</a></li>
+          <li><a href="#problem" class="nav-link" data-i18n="nav.problem">Why</a></li>
+          <li><a href="#features" class="nav-link" data-i18n="nav.features">Features</a></li>
+          <li><a href="#how-it-works" class="nav-link" data-i18n="nav.how">How it works</a></li>
+          <li><a href="#game" class="nav-link" data-i18n="nav.game">Game</a></li>
+          <li><a href="#trust" class="nav-link" data-i18n="nav.trust">Trust</a></li>
+          <li><a href="#partners" class="nav-link" data-i18n="nav.partners">Partners</a></li>
+        </ul>
+      </nav>
       <div class="header-actions">
-        <a href="#partners" class="text-link header-partner" data-i18n="header.partners">For schools &amp; employers</a>
         <a href="https://finsavee.lovable.app/" class="btn btn-primary btn-sm" data-cta="header" data-i18n="cta.try">Try the demo</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+          <i data-lucide="menu" class="icon-open"></i><i data-lucide="x" class="icon-close"></i>
+        </button>
       </div>
     </div>
   </header>
 
   <main id="main">
     <!-- 2. HERO -->
-    <section class="hero">
+    <section class="hero" id="home">
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow reveal" data-i18n="hero.eyebrow">For students and young adults in the Netherlands</p>
@@ -133,7 +146,7 @@
     </section>
 
     <!-- 3. PROBLEM -->
-    <section class="section problem">
+    <section class="section problem" id="problem">
       <div class="container narrow center">
         <h2 class="reveal" data-i18n="problem.title">Payday is great. The last week of the month isn't.</h2>
         <p class="section-lead reveal" data-i18n="problem.body">Many 18–25 year olds can't save what they want by the end of the month. Some run out of money before the month is even over.</p>
@@ -155,7 +168,7 @@
     </section>
 
     <!-- 4. BENEFITS -->
-    <section class="section">
+    <section class="section" id="features">
       <div class="container">
         <h2 class="center reveal" data-i18n="benefits.title">What FinSave does for you</h2>
         <div class="card-grid">
@@ -184,7 +197,7 @@
     </section>
 
     <!-- 5. HOW IT WORKS -->
-    <section class="section tint">
+    <section class="section tint" id="how-it-works">
       <div class="container">
         <h2 class="center reveal" data-i18n="how.title">How it works</h2>
         <ol class="steps">
@@ -208,7 +221,7 @@
     </section>
 
     <!-- 6. GAME -->
-    <section class="section">
+    <section class="section" id="game">
       <div class="container game-grid">
         <div class="game-copy">
           <h2 class="reveal" data-i18n="game.title">Make saving a game</h2>
@@ -239,7 +252,7 @@
     </section>
 
     <!-- 7. CREDIBILITY -->
-    <section class="section tint">
+    <section class="section tint" id="trust">
       <div class="container">
         <h2 class="center reveal" data-i18n="cred.title">Built for real students</h2>
         <div class="cred-grid">

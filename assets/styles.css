@@ -101,10 +101,45 @@ a { color: var(--brand-dark); }
 }
 .site-header.is-scrolled { border-bottom-color: var(--line); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); gap: 1rem; }
-.header-actions { display: flex; align-items: center; gap: 1.25rem; }
-.header-partner { font-size: .95rem; text-decoration: none; }
-.header-partner:hover { text-decoration: underline; }
-@media (max-width: 719px) { .header-partner { display: none; } }
+.header-actions { display: flex; align-items: center; gap: .5rem; }
+section[id] { scroll-margin-top: var(--header-h); }
+
+/* Main nav (centred links, active link in brand colour) */
+.main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 2px; }
+.nav-link {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 .8rem;
+  font-weight: 500; font-size: .98rem; color: var(--ink); text-decoration: none;
+  border-radius: var(--r-pill); transition: color .2s, background-color .2s;
+}
+.nav-link:hover { color: var(--brand-dark); background: var(--tint); }
+.nav-link.is-active { color: var(--brand); font-weight: 600; }
+.nav-toggle {
+  display: none; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 12px;
+  background: transparent; color: var(--ink); cursor: pointer;
+}
+.nav-toggle:hover { background: var(--tint); }
+.nav-toggle svg { width: 24px; height: 24px; }
+.nav-toggle .icon-close { display: none; }
+.nav-toggle[aria-expanded="true"] .icon-open { display: none; }
+.nav-toggle[aria-expanded="true"] .icon-close { display: block; }
+
+@media (min-width: 1024px) {
+  .header-inner { display: grid; grid-template-columns: 1fr auto 1fr; }
+  .header-actions { justify-self: end; }
+}
+@media (max-width: 1023px) {
+  .nav-toggle { display: grid; }
+  .main-nav {
+    position: absolute; top: var(--header-h); left: 0; right: 0;
+    background: #fff; border-bottom: 1px solid var(--line); box-shadow: var(--shadow-md);
+    padding: 8px var(--gutter) 16px; display: none;
+  }
+  .main-nav.is-open { display: block; }
+  .main-nav ul { flex-direction: column; align-items: stretch; gap: 2px; }
+  .nav-link { width: 100%; border-radius: var(--r-sm); padding: 0 1rem; font-size: 1.05rem; }
+  .nav-link.is-active { background: var(--tint-soft); }
+}
+@media (max-width: 400px) { .header-actions .btn-sm { padding: 0 .9rem; font-size: .9rem; } }
 
 /* ---------- Hero ---------- */
 .hero { padding: 40px 0 72px; overflow: hidden; }

@@ -16,6 +16,41 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
+  // Mobile menu
+  var nav = document.getElementById("main-nav");
+  var toggle = document.getElementById("nav-toggle");
+  function setMenu(open) {
+    nav.classList.toggle("is-open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  }
+  if (nav && toggle) {
+    toggle.addEventListener("click", function () { setMenu(!nav.classList.contains("is-open")); });
+    nav.addEventListener("click", function (e) { if (e.target.closest("a")) setMenu(false); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
+  }
+
+  // Active nav link follows the section in view
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav-link"));
+  var sections = navLinks.map(function (a) { return document.querySelector(a.getAttribute("href")); }).filter(Boolean);
+  function setActive() {
+    var line = window.scrollY + window.innerHeight * 0.35;
+    var current = sections[0];
+    sections.forEach(function (sec) { if (sec.offsetTop <= line) current = sec; });
+    // At the very bottom, the last section wins
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) current = sections[sections.length - 1];
+    navLinks.forEach(function (a) {
+      var on = a.getAttribute("href") === "#" + current.id;
+      a.classList.toggle("is-active", on);
+      if (on) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
+    });
+  }
+  if (sections.length) {
+    setActive();
+    window.addEventListener("scroll", setActive, { passive: true });
+    window.addEventListener("resize", setActive);
+  }
+
   // Fade-up reveal + progress bars filling
   var revealEls = document.querySelectorAll(".reveal");
   if (reduceMotion || !("IntersectionObserver" in window)) {
