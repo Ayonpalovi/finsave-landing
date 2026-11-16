@@ -8,7 +8,7 @@ The only call to action is "Try the demo", which links to https://finsavee.lovab
 - Notify form: set `data-endpoint` on `#notify-form` (Formspree, Supabase function, etc.). Until it's set, the form shows a thank-you message but **stores nothing**.
 - Partner link: `mailto:hello@finsave.example` becomes your real address.
 - Testimonial: swap the `[Replace with a real quote…]` placeholder for a real tester quote.
-- Footer privacy note placeholder.
+- Privacy Policy and Terms are first drafts (not legal advice); review before collecting real data.
 
 ## Dutch version later
 English lives in the HTML. Every string has a `data-i18n` key. See the header of `assets/i18n.js`:
@@ -18,6 +18,9 @@ run `FinSaveI18n.dumpKeys()` in the console, translate into `locales/nl.js`, inc
 - `index.html`: all sections
 - `assets/styles.css`: design tokens (`:root`) and layout
 - `assets/main.js`: icons, scroll reveal, sticky mobile CTA, notify form
+- `assets/wave.js`: hero background wave (canvas) and the cursor light
+- `assets/features3d.js`: 3D piggy bank (three.js) in Features, with connector lines and card entrance
+- `privacy.html`, `terms.html`: generated legal pages; have them reviewed, and replace hello@finsave.example
 - `assets/i18n.js`: locale loader
 - `assets/img/logo-*.png`: piggy-bank logo (square, padded from `logo-source.jpg`)
 - `favicon.ico`, `favicon-48.png`, `apple-touch-icon.png`, `og-image.png` (1200×630)

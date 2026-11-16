@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>FinSave | Turn habits into savings</title>
   <meta name="description" content="Know how much you can safely spend each day, build savings goals and money habits. Made for students and young adults in the Netherlands." />
-  <meta name="theme-color" content="#007D6C" />
+  <meta name="theme-color" content="#06100E" />
   <link rel="preload" href="assets/img/logo-96.png" as="image" />
 
   <!-- Open Graph / social. EDIT: replace https://finsave-landing-zeta.vercel.app with the live domain. -->
@@ -29,12 +29,13 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css?v=9" />
   <script>document.documentElement.classList.add("js");</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is FinSave?", "acceptedAnswer": {"@type": "Answer", "text": "FinSave is a money app for young adults aged 18–25 in the Netherlands, students first. It shows how much you can safely spend each day and helps you build savings goals and money habits."}}, {"@type": "Question", "name": "What does “safe to spend” mean?", "acceptedAnswer": {"@type": "Answer", "text": "It’s the amount you can spend today without touching rent, bills or your savings, so your money lasts until payday. In the demo you can see it on the dashboard next to your days to payday."}}, {"@type": "Question", "name": "Do I need to sign up to try it?", "acceptedAnswer": {"@type": "Answer", "text": "No. The demo needs no sign-up and runs on example data, so you can click around without entering anything about yourself."}}, {"@type": "Question", "name": "Is the demo my real money?", "acceptedAnswer": {"@type": "Answer", "text": "No. Everything in the demo is example data. It’s there to show you how FinSave works, not to track your actual accounts."}}, {"@type": "Question", "name": "What is the 24-hour pause?", "acceptedAnswer": {"@type": "Answer", "text": "When FinSave spots an unplanned purchase, you can wait 24 hours before the next one. It’s a small habit that helps you spend on purpose, without guilt."}}, {"@type": "Question", "name": "Does FinSave show ads or affiliate links?", "acceptedAnswer": {"@type": "Answer", "text": "No ads. The Deals section has no affiliate links either."}}, {"@type": "Question", "name": "Who made FinSave?", "acceptedAnswer": {"@type": "Answer", "text": "A student team at Inholland University of Applied Sciences, built around a validated problem: young adults running out of money before month-end."}}, {"@type": "Question", "name": "When can I get the full app?", "acceptedAnswer": {"@type": "Answer", "text": "Launch details, including pricing, haven’t been announced yet. Leave your email in the box at the bottom of this page and we’ll let you know when FinSave launches."}}]}</script>
 </head>
 <body>
+  <div class="page-spot" id="hero-spot" aria-hidden="true"></div>
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
   <!-- 1. HEADER -->
@@ -56,7 +57,7 @@
         </ul>
       </nav>
       <div class="header-actions">
-        <a href="https://finsavee.lovable.app/" class="btn btn-primary btn-sm" data-cta="header" data-i18n="cta.try">Try the demo</a>
+        <a href="https://finsavee.lovable.app/" class="btn btn-ghost btn-sm" data-cta="header" data-i18n="cta.try">Try the demo</a>
         <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
           <i data-lucide="menu" class="icon-open"></i><i data-lucide="x" class="icon-close"></i>
         </button>
@@ -65,82 +66,39 @@
   </header>
 
   <main id="main">
-    <!-- 2. HERO -->
+    <!-- 2. HERO (dark, animated wave, floating glass cards) -->
     <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow reveal" data-i18n="hero.eyebrow">For students and young adults in the Netherlands</p>
-          <h1 class="reveal"><span class="hl" data-i18n="hero.titleA">Turn habits</span> <span data-i18n="hero.titleB">into savings</span></h1>
-          <p class="lead reveal" data-i18n="hero.subtitle">Know exactly how much you can safely spend each day, so you never run out of money before payday.</p>
-          <div class="hero-cta reveal" id="hero-cta">
-            <a href="https://finsavee.lovable.app/" class="btn btn-primary btn-lg" data-cta="hero">
-              <span data-i18n="cta.try">Try the demo</span>
-              <i data-lucide="arrow-right" aria-hidden="true"></i>
-            </a>
-            <p class="fineprint" data-i18n="hero.fineprint">Demo with example data. No sign-up needed.</p>
-          </div>
+      <canvas class="hero-wave" id="hero-wave" aria-hidden="true"></canvas>
+
+      <div class="container hero-inner">
+        <h1 class="reveal"><span class="hl" data-i18n="hero.titleA">Turn habits</span> <span data-i18n="hero.titleB">into savings</span></h1>
+        <p class="lead reveal" data-i18n="hero.subtitle">Know exactly how much you can safely spend each day, so you never run out of money before payday.</p>
+        <div class="hero-cta reveal" id="hero-cta">
+          <a href="https://finsavee.lovable.app/" class="btn btn-primary btn-lg" data-cta="hero">
+            <span data-i18n="cta.try">Try the demo</span>
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </a>
+          <p class="fineprint" data-i18n="hero.fineprint">Demo with example data. No sign-up needed.</p>
         </div>
 
-        <!-- Phone mockup (pure HTML/CSS, numbers mirror the demo app) -->
-        <div class="hero-visual reveal" aria-label="Preview of the FinSave dashboard" role="img">
-          <div class="phone" aria-hidden="true">
-            <div class="phone-notch"></div>
-            <div class="phone-screen">
-              <div class="app-top">
-                <img class="logo-mark logo-mark-sm" src="assets/img/logo-96.png" alt="" width="24" height="24" />
-                <span class="app-brand">FinSave</span>
-              </div>
-              <p class="app-hi"><span data-i18n="mock.hi">Hi, Sanne</span> 👋</p>
-
-              <div class="app-card">
-                <p class="app-label" data-i18n="mock.balance">Available balance</p>
-                <p class="app-balance">€1,182.40</p>
-                <div class="app-row">
-                  <span class="app-pill"><span data-i18n="mock.safe">Safe to spend / day</span> <strong>€112.49</strong></span>
-                </div>
-                <p class="app-muted"><i data-lucide="calendar-days"></i> <span data-i18n="mock.payday">9 days to payday</span></p>
-              </div>
-
-              <div class="app-card">
-                <div class="app-card-head">
-                  <p class="app-title" data-i18n="mock.goals">Savings goals</p>
-                  <span class="app-link" data-i18n="mock.viewGoals">View goals →</span>
-                </div>
-                <div class="goal">
-                  <div class="goal-head"><span data-i18n="mock.goal1">Laptop</span><span>36%</span></div>
-                  <div class="bar"><span class="bar-fill" style="--p:36%"></span></div>
-                  <p class="app-muted-sm">€320 of €900</p>
-                </div>
-                <div class="goal">
-                  <div class="goal-head"><span data-i18n="mock.goal2">Summer holiday</span><span>30%</span></div>
-                  <div class="bar"><span class="bar-fill" style="--p:30%"></span></div>
-                  <p class="app-muted-sm">€180 of €600</p>
-                </div>
-              </div>
-
-              <div class="app-card">
-                <div class="app-card-head">
-                  <p class="app-title" data-i18n="mock.upcoming">Upcoming payments</p>
-                </div>
-                <div class="app-pay"><span data-i18n="mock.phonePlan">Phone plan · 11-20</span><strong>€15.00</strong></div>
-                <div class="app-pay"><span data-i18n="mock.checkin">Daily check-in</span><span class="app-xp">+10 XP</span></div>
-              </div>
-
-              <nav class="app-nav">
-                <span class="is-active"><i data-lucide="house"></i><small data-i18n="mock.nav.dashboard">Dashboard</small></span>
-                <span><i data-lucide="gamepad-2"></i><small data-i18n="mock.nav.game">Game</small></span>
-                <span><i data-lucide="tag"></i><small data-i18n="mock.nav.deal">Deal</small></span>
-                <span><i data-lucide="repeat"></i><small data-i18n="mock.nav.habits">Habits</small></span>
-                <span><i data-lucide="target"></i><small data-i18n="mock.nav.goals">Goals</small></span>
-              </nav>
-            </div>
+        <!-- Floating glass cards: numbers mirror the demo app's example data -->
+        <div class="hero-cards reveal" role="img" aria-label="FinSave preview: safe to spend today €112.49, savings goals Laptop 36% and Summer holiday 30%, and a Can I afford it check">
+          <div class="glass-card gc-1" aria-hidden="true">
+            <p class="gc-head"><i data-lucide="wallet"></i><span data-i18n="cards.safe.title">Safe to spend today</span></p>
+            <p class="gc-big">€112.49</p>
+            <p class="gc-sub"><i data-lucide="calendar-days"></i><span data-i18n="cards.safe.sub">9 days to payday</span></p>
           </div>
-          <div class="float-chip" aria-hidden="true">
-            <span class="chip-icon"><i data-lucide="wallet"></i></span>
-            <span>
-              <small data-i18n="mock.chipLabel">Safe to spend today</small>
-              <strong>€112.49</strong>
-            </span>
+          <div class="glass-card gc-2" aria-hidden="true">
+            <p class="gc-head"><i data-lucide="target"></i><span data-i18n="cards.goals.title">Savings goals</span></p>
+            <div class="gc-goal"><span data-i18n="cards.goals.g1">Laptop</span><span>36%</span></div>
+            <div class="bar"><span class="bar-fill" style="--p:36%"></span></div>
+            <div class="gc-goal"><span data-i18n="cards.goals.g2">Summer holiday</span><span>30%</span></div>
+            <div class="bar"><span class="bar-fill" style="--p:30%"></span></div>
+          </div>
+          <div class="glass-card gc-3" aria-hidden="true">
+            <p class="gc-head"><i data-lucide="calculator"></i><span data-i18n="cards.afford.title">Can I afford it?</span></p>
+            <div class="gc-goal"><span data-i18n="cards.afford.item">New headphones</span><span>€59</span></div>
+            <p class="gc-ok"><i data-lucide="check"></i><span data-i18n="cards.afford.ok">Fits your plan</span></p>
           </div>
         </div>
       </div>
@@ -168,28 +126,33 @@
       </div>
     </section>
 
-    <!-- 4. BENEFITS -->
-    <section class="section" id="features">
+    <!-- 4. BENEFITS: 3D piggy bank with four feature cards around it -->
+    <section class="section features" id="features">
       <div class="container">
         <h2 class="center reveal" data-i18n="benefits.title">What FinSave does for you</h2>
-        <div class="card-grid">
-          <article class="card lift reveal">
-            <span class="icon-tile"><i data-lucide="shield-check"></i></span>
+        <div class="feat-stage" id="feat-stage">
+          <svg class="feat-lines" id="feat-lines" aria-hidden="true"></svg>
+          <div class="feat-3d" aria-hidden="true">
+            <canvas id="feat-canvas"></canvas>
+            <img class="feat-fallback" src="assets/img/logo-512.png" alt="" width="220" height="220" />
+          </div>
+          <article class="feat-card feat-1" data-side="left" style="--d:0.55s">
+            <span class="feat-icon"><i data-lucide="wallet"></i></span>
             <h3 data-i18n="benefits.1.title">Safe to spend, every day</h3>
             <p data-i18n="benefits.1.body">See what you can spend today without touching rent, bills or savings.</p>
           </article>
-          <article class="card lift reveal">
-            <span class="icon-tile"><i data-lucide="target"></i></span>
+          <article class="feat-card feat-2" data-side="left" style="--d:0.75s">
+            <span class="feat-icon"><i data-lucide="target"></i></span>
             <h3 data-i18n="benefits.2.title">Goals with a weekly amount</h3>
             <p data-i18n="benefits.2.body">Pick a goal, and FinSave tells you the weekly amount to reach it.</p>
           </article>
-          <article class="card lift reveal">
-            <span class="icon-tile"><i data-lucide="calculator"></i></span>
+          <article class="feat-card feat-3" data-side="right" style="--d:0.65s">
+            <span class="feat-icon"><i data-lucide="calculator"></i></span>
             <h3 data-i18n="benefits.3.title">Can I afford it?</h3>
             <p data-i18n="benefits.3.body">Check a purchase against your plan before you buy. Transparent maths, no guesswork.</p>
           </article>
-          <article class="card lift reveal">
-            <span class="icon-tile"><i data-lucide="hourglass"></i></span>
+          <article class="feat-card feat-4" data-side="right" style="--d:0.85s">
+            <span class="feat-icon"><i data-lucide="hourglass"></i></span>
             <h3 data-i18n="benefits.4.title">Habits, not guilt</h3>
             <p data-i18n="benefits.4.body">Spot unplanned purchases and try the 24-hour pause before the next one.</p>
           </article>
@@ -198,7 +161,7 @@
     </section>
 
     <!-- 5. HOW IT WORKS -->
-    <section class="section tint" id="how-it-works">
+    <section class="section" id="how-it-works">
       <div class="container">
         <h2 class="center reveal" data-i18n="how.title">How it works</h2>
         <ol class="steps">
@@ -218,37 +181,6 @@
             <p data-i18n="how.3">Build small habits and watch your goals fill up.</p>
           </li>
         </ol>
-      </div>
-    </section>
-
-    <!-- 6. GAME -->
-    <section class="section" id="game">
-      <div class="container game-grid">
-        <div class="game-copy">
-          <h2 class="reveal" data-i18n="game.title">Make saving a game</h2>
-          <p class="section-lead reveal" data-i18n="game.body">Learn money skills by playing, not by reading a textbook.</p>
-        </div>
-        <div class="game-card card reveal">
-          <div class="game-head">
-            <div>
-              <p class="game-name" data-i18n="game.name">Financial Tycoon</p>
-              <p class="app-muted" data-i18n="game.tagline">Better habits. A world that grows with you.</p>
-            </div>
-            <span class="xp-badge"><i data-lucide="sparkles"></i> 100 XP</span>
-          </div>
-          <div class="challenge">
-            <span class="icon-tile icon-tile-sm"><i data-lucide="piggy-bank"></i></span>
-            <div class="challenge-body">
-              <p class="challenge-title" data-i18n="game.challenge">Emergency savings sprint (€50)</p>
-              <p class="app-muted"><i data-lucide="clock"></i> <span data-i18n="game.days">14 days</span> · 100 XP</p>
-            </div>
-            <a href="https://finsavee.lovable.app/" class="btn btn-primary btn-sm" data-cta="game" data-i18n="game.start">Start</a>
-          </div>
-          <div class="xp">
-            <div class="xp-head"><span data-i18n="game.level">Level 3</span><span>240 / 400 XP</span></div>
-            <div class="bar"><span class="bar-fill" style="--p:60%"></span></div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -387,7 +319,7 @@
     <section class="cta-band" id="final-cta">
       <div class="container narrow center">
         <h2 class="reveal" data-i18n="final.title">Ready to stop guessing?</h2>
-        <a href="https://finsavee.lovable.app/" class="btn btn-white btn-lg reveal" data-cta="final">
+        <a href="https://finsavee.lovable.app/" class="btn btn-primary btn-lg reveal" data-cta="final">
           <span data-i18n="cta.try">Try the demo</span>
           <i data-lucide="arrow-right" aria-hidden="true"></i>
         </a>
@@ -417,19 +349,42 @@
 
   <!-- 10. FOOTER -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <a href="#top" class="logo" aria-label="FinSave home">
-          <img class="logo-mark" src="assets/img/logo-96.png" alt="" width="36" height="36" />
-          <span class="logo-word">FinSave</span>
-        </a>
-        <p class="footer-slogan" data-i18n="footer.slogan">Turn habits into savings</p>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#top" class="logo" aria-label="FinSave home">
+            <img class="logo-mark" src="assets/img/logo-96.png" alt="" width="34" height="34" />
+            <span class="logo-word">FinSave</span>
+          </a>
+          <p class="footer-about" data-i18n="footer.about">Turn habits into savings. FinSave helps young adults in the Netherlands see what they can safely spend each day, reach their savings goals and build better money habits.</p>
+        </div>
+        <nav class="footer-col" aria-label="Explore">
+          <p class="footer-head" data-i18n="footer.explore">Explore</p>
+          <ul>
+            <li><a href="#problem" data-i18n="nav.problem">Why</a></li>
+            <li><a href="#features" data-i18n="nav.features">Features</a></li>
+            <li><a href="#how-it-works" data-i18n="nav.how">How it works</a></li>
+            <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="FinSave">
+          <p class="footer-head">FinSave</p>
+          <ul>
+            <li><a href="https://finsavee.lovable.app/" data-i18n="cta.try">Try the demo</a></li>
+            <li><a href="#trust" data-i18n="footer.trust">Built for real students</a></li>
+            <li><a href="#final-cta" data-i18n="footer.updates">Get launch updates</a></li>
+            <li><a href="#partners" data-i18n="footer.partners">For schools &amp; employers</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="footer-meta">
-        <p data-i18n="footer.made">Made at Inholland University of Applied Sciences</p>
-        <!-- EDIT: replace with your real privacy statement / link -->
-        <p data-i18n="footer.privacy">Privacy: [Add a short privacy note or link to your privacy statement here.]</p>
-        <p>© <span id="year">2026</span> FinSave</p>
+      <p class="footer-disclaimer" data-i18n="footer.disclaimer">Disclaimer: FinSave is a student project made at Inholland University of Applied Sciences. The demo uses example data and is not connected to any bank. FinSave gives general money tools, not personal financial advice.</p>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> FinSave. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        <p class="footer-legal">
+          <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+          <span aria-hidden="true">|</span>
+          <a href="terms.html" data-i18n="footer.terms">Terms &amp; Conditions</a>
+        </p>
       </div>
     </div>
   </footer>
@@ -443,7 +398,9 @@
   </div>
 
   <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" defer></script>
-  <script src="assets/i18n.js" defer></script>
-  <script src="assets/main.js" defer></script>
+  <script src="assets/i18n.js?v=7" defer></script>
+  <script src="assets/main.js?v=7" defer></script>
+  <script src="assets/wave.js?v=7" defer></script>
+  <script type="module" src="assets/features3d.js?v=6"></script>
 </body>
 </html>
