@@ -51,6 +51,22 @@
     window.addEventListener("resize", setActive);
   }
 
+  // FAQ accordion (one open at a time)
+  var faqBtns = document.querySelectorAll(".faq-btn");
+  faqBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var open = btn.getAttribute("aria-expanded") === "true";
+      faqBtns.forEach(function (b) {
+        b.setAttribute("aria-expanded", "false");
+        b.closest(".faq-item").classList.remove("is-open");
+      });
+      if (!open) {
+        btn.setAttribute("aria-expanded", "true");
+        btn.closest(".faq-item").classList.add("is-open");
+      }
+    });
+  });
+
   // Fade-up reveal + progress bars filling
   var revealEls = document.querySelectorAll(".reveal");
   if (reduceMotion || !("IntersectionObserver" in window)) {
