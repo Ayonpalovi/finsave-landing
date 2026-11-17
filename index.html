@@ -30,9 +30,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css?v=10" />
+  <link rel="stylesheet" href="assets/styles.css?v=16" />
   <script>document.documentElement.classList.add("js");</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is FinSave?", "acceptedAnswer": {"@type": "Answer", "text": "FinSave is a money app for young adults aged 18–25 in the Netherlands, students first. It shows how much you can safely spend each day and helps you build savings goals and money habits."}}, {"@type": "Question", "name": "What does “safe to spend” mean?", "acceptedAnswer": {"@type": "Answer", "text": "It’s the amount you can spend today without touching rent, bills or your savings, so your money lasts until payday. In the demo you can see it on the dashboard next to your days to payday."}}, {"@type": "Question", "name": "Do I need to sign up to try it?", "acceptedAnswer": {"@type": "Answer", "text": "No. The demo needs no sign-up and runs on example data, so you can click around without entering anything about yourself."}}, {"@type": "Question", "name": "Is the demo my real money?", "acceptedAnswer": {"@type": "Answer", "text": "No. Everything in the demo is example data. It’s there to show you how FinSave works, not to track your actual accounts."}}, {"@type": "Question", "name": "What is the 24-hour pause?", "acceptedAnswer": {"@type": "Answer", "text": "When FinSave spots an unplanned purchase, you can wait 24 hours before the next one. It’s a small habit that helps you spend on purpose, without guilt."}}, {"@type": "Question", "name": "Does FinSave show ads or affiliate links?", "acceptedAnswer": {"@type": "Answer", "text": "No ads. The Deals section has no affiliate links either."}}, {"@type": "Question", "name": "Who made FinSave?", "acceptedAnswer": {"@type": "Answer", "text": "A student team at Inholland University of Applied Sciences, built around a validated problem: young adults running out of money before month-end."}}, {"@type": "Question", "name": "When can I get the full app?", "acceptedAnswer": {"@type": "Answer", "text": "Launch details, including pricing, haven’t been announced yet. Leave your email in the box at the bottom of this page and we’ll let you know when FinSave launches."}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is FinSave?", "acceptedAnswer": {"@type": "Answer", "text": "FinSave is a money app for students and young adults in the Netherlands. It helps you see what you can safely spend each day, save towards your goals and build better money habits, so you don’t run out before payday."}}, {"@type": "Question", "name": "Who is FinSave for?", "acceptedAnswer": {"@type": "Answer", "text": "Students and young adults, roughly 18 to 25, who want their money to last the whole month. You don’t need to know anything about budgeting to use it."}}, {"@type": "Question", "name": "Is FinSave a bank?", "acceptedAnswer": {"@type": "Answer", "text": "No. FinSave isn’t a bank and never holds or moves your money. It’s a tool that helps you plan and keep track of what you earn and spend."}}, {"@type": "Question", "name": "Do I need to sign up to try it?", "acceptedAnswer": {"@type": "Answer", "text": "No. The demo is open to everyone: no account, no email, no sign-up. Just tap “Try the demo”."}}, {"@type": "Question", "name": "Do I need to install anything?", "acceptedAnswer": {"@type": "Answer", "text": "No. The demo runs in your browser on your phone or laptop, so there’s nothing to download."}}, {"@type": "Question", "name": "Is my real money or data used in the demo?", "acceptedAnswer": {"@type": "Answer", "text": "No. The demo runs on example data, so you can click around freely. Please don’t enter real bank details or passwords into it."}}, {"@type": "Question", "name": "Does FinSave give financial advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. FinSave gives you clear numbers and tools to plan with, but it isn’t personal financial advice. The choices about your money stay yours."}}, {"@type": "Question", "name": "Who made FinSave?", "acceptedAnswer": {"@type": "Answer", "text": "A student team at Inholland University of Applied Sciences, who built it around a problem we kept seeing around us: running out of money before the end of the month."}}, {"@type": "Question", "name": "When does FinSave launch, and what will it cost?", "acceptedAnswer": {"@type": "Answer", "text": "We haven’t announced a launch date or pricing yet. Leave your email at the bottom of this page and we’ll let you know when FinSave launches."}}]}</script>
 </head>
 <body>
   <div class="page-spot" id="hero-spot" aria-hidden="true"></div>
@@ -184,36 +184,97 @@
       </div>
     </section>
 
-    <!-- 7. CREDIBILITY -->
-    <section class="section tint" id="trust">
+    <!-- 7. GOOD TO KNOW: bento cards with continuous subtle motion (all figures are the demo's example data) -->
+    <section class="section" id="trust">
       <div class="container">
-        <h2 class="center reveal" data-i18n="cred.title">Built for real students</h2>
-        <div class="cred-grid">
-          <div class="card reveal">
-            <span class="icon-tile"><i data-lucide="search-check"></i></span>
-            <p data-i18n="cred.1">Designed around a validated problem: young adults aged 18–25 running out of money before month-end.</p>
-          </div>
-          <div class="card reveal">
-            <span class="icon-tile"><i data-lucide="graduation-cap"></i></span>
-            <p data-i18n="cred.2">Made by a student team at Inholland University of Applied Sciences.</p>
-          </div>
+        <h2 class="center reveal" data-i18n="know.title">Good to know</h2>
+        <p class="section-lead center reveal" data-i18n="know.lead">The things that make FinSave different. Figures shown are the demo's example data.</p>
+        <div class="bento">
+
+          <article class="bn-card bn-wide reveal">
+            <div class="bn-visual bn-marquee" aria-hidden="true">
+              <div class="bn-col"><div class="bn-scroll"><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Available balance</p><div class="bn-tile-r"><p class="bn-tile-v">€1,182.40</p></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Safe to spend / day</p><div class="bn-tile-r"><p class="bn-tile-v">€112.49</p><span class="bn-chip"><i data-lucide="shield-check"></i>Safe</span></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Days to payday</p><div class="bn-tile-r"><p class="bn-tile-v">9 days</p></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Available balance</p><div class="bn-tile-r"><p class="bn-tile-v">€1,182.40</p></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Safe to spend / day</p><div class="bn-tile-r"><p class="bn-tile-v">€112.49</p><span class="bn-chip"><i data-lucide="shield-check"></i>Safe</span></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Days to payday</p><div class="bn-tile-r"><p class="bn-tile-v">9 days</p></div></div></div></div>
+              <div class="bn-col bn-col-rev"><div class="bn-scroll"><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Laptop goal</p><div class="bn-tile-r"><p class="bn-tile-v">36%</p><span class="bn-chip"><i data-lucide="trending-up"></i>On track</span></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Summer holiday</p><div class="bn-tile-r"><p class="bn-tile-v">30%</p><span class="bn-chip"><i data-lucide="trending-up"></i>On track</span></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Phone plan · 11-20</p><div class="bn-tile-r"><p class="bn-tile-v">€15.00</p></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Laptop goal</p><div class="bn-tile-r"><p class="bn-tile-v">36%</p><span class="bn-chip"><i data-lucide="trending-up"></i>On track</span></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Summer holiday</p><div class="bn-tile-r"><p class="bn-tile-v">30%</p><span class="bn-chip"><i data-lucide="trending-up"></i>On track</span></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Phone plan · 11-20</p><div class="bn-tile-r"><p class="bn-tile-v">€15.00</p></div></div></div></div>
+              <div class="bn-col bn-col-solo"><div class="bn-scroll"><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Available balance</p><div class="bn-tile-r"><p class="bn-tile-v">€1,182.40</p></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Safe to spend / day</p><div class="bn-tile-r"><p class="bn-tile-v">€112.49</p><span class="bn-chip"><i data-lucide="shield-check"></i>Safe</span></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Days to payday</p><div class="bn-tile-r"><p class="bn-tile-v">9 days</p></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Laptop goal</p><div class="bn-tile-r"><p class="bn-tile-v">36%</p><span class="bn-chip"><i data-lucide="trending-up"></i>On track</span></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Summer holiday</p><div class="bn-tile-r"><p class="bn-tile-v">30%</p><span class="bn-chip"><i data-lucide="trending-up"></i>On track</span></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Phone plan · 11-20</p><div class="bn-tile-r"><p class="bn-tile-v">€15.00</p></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Available balance</p><div class="bn-tile-r"><p class="bn-tile-v">€1,182.40</p></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Safe to spend / day</p><div class="bn-tile-r"><p class="bn-tile-v">€112.49</p><span class="bn-chip"><i data-lucide="shield-check"></i>Safe</span></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Days to payday</p><div class="bn-tile-r"><p class="bn-tile-v">9 days</p></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Laptop goal</p><div class="bn-tile-r"><p class="bn-tile-v">36%</p><span class="bn-chip"><i data-lucide="trending-up"></i>On track</span></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Summer holiday</p><div class="bn-tile-r"><p class="bn-tile-v">30%</p><span class="bn-chip"><i data-lucide="trending-up"></i>On track</span></div></div><div class="bn-tile"><p class="bn-tile-l"><span class="bn-dot"></span>Phone plan · 11-20</p><div class="bn-tile-r"><p class="bn-tile-v">€15.00</p></div></div></div></div>
+            </div>
+            <h3 data-i18n="know.1.title">Your whole month on one screen</h3>
+            <p data-i18n="know.1.body">Balance, safe daily amount, days to payday, goals and upcoming payments, all in one calm overview. No spreadsheets.</p>
+          </article>
+
+          <article class="bn-card reveal">
+            <div class="bn-visual bn-chart" aria-hidden="true">
+              <div class="bn-chart-head"><span data-i18n="know.2.label">Laptop goal</span><span class="bn-badge">€38.67 / week</span></div>
+              <svg viewBox="0 0 300 130" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="bnFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2FE0B0" stop-opacity=".45"/><stop offset="1" stop-color="#2FE0B0" stop-opacity="0"/></linearGradient>
+                </defs>
+                <path class="bn-area" d="M0,118 C30,112 50,104 75,100 C105,95 120,86 150,78 C180,70 200,64 225,52 C250,40 270,30 300,14 L300,130 L0,130 Z" fill="url(#bnFill)"/>
+                <path class="bn-line" pathLength="1" d="M0,118 C30,112 50,104 75,100 C105,95 120,86 150,78 C180,70 200,64 225,52 C250,40 270,30 300,14"/>
+                <circle class="bn-pulse" cx="300" cy="14" r="5"/>
+              </svg>
+              <div class="bn-axis"><span>W1</span><span>W8</span><span>W16</span></div>
+            </div>
+            <h3 data-i18n="know.2.title">A weekly amount for every goal</h3>
+            <p data-i18n="know.2.body">Pick a goal and a date. FinSave works out what to put aside each week to get there.</p>
+          </article>
+
+          <article class="bn-card reveal">
+            <div class="bn-visual bn-check" aria-hidden="true">
+              <div class="bn-q"><i data-lucide="calculator"></i><span data-i18n="know.3.q">Can I afford it?</span></div>
+              <div class="bn-items">
+                <div class="bn-item"><span>New headphones</span><b>€59</b><span class="bn-ok"><i data-lucide="check"></i>Fits</span></div>
+                <div class="bn-item"><span>Concert ticket</span><b>€85</b><span class="bn-warn"><i data-lucide="triangle-alert"></i>Careful</span></div>
+                <div class="bn-item"><span>Lunch out</span><b>€12</b><span class="bn-ok"><i data-lucide="check"></i>Fits</span></div>
+              </div>
+            </div>
+            <h3 data-i18n="know.3.title">Check before you buy</h3>
+            <p data-i18n="know.3.body">See how a purchase affects your plan before you pay. The maths is shown, never hidden.</p>
+          </article>
+
+          <article class="bn-card reveal">
+            <div class="bn-visual bn-orbit" aria-hidden="true">
+              <span class="bn-o bn-o1"><i data-lucide="ban"></i>No ads</span>
+              <span class="bn-o bn-o2"><i data-lucide="link-2-off"></i>No affiliate links</span>
+              <span class="bn-o bn-o3 bn-o-main"><i data-lucide="shield-check"></i>On your side</span>
+              <span class="bn-o bn-o4"><i data-lucide="eye-off"></i>No mood guessing</span>
+              <span class="bn-o bn-o5"><i data-lucide="flask-conical"></i>Example data</span>
+            </div>
+            <h3 data-i18n="know.4.title">Honest by design</h3>
+            <p data-i18n="know.4.body">No ads, no affiliate links in Deals, and no pretending to read your feelings from your transactions.</p>
+          </article>
+
+          <article class="bn-card reveal">
+            <div class="bn-visual bn-pause" aria-hidden="true">
+              <div class="bn-ring"><svg viewBox="0 0 120 120"><circle class="bn-ring-bg" cx="60" cy="60" r="50"/><circle class="bn-ring-fg" cx="60" cy="60" r="50" pathLength="1"/></svg>
+                <div class="bn-ring-txt"><b>24h</b><span>pause</span></div></div>
+              <span class="bn-tag bn-tag1">Unplanned buy spotted</span>
+              <span class="bn-tag bn-tag2">Sleep on it</span>
+            </div>
+            <h3 data-i18n="know.5.title">Small habits, no guilt</h3>
+            <p data-i18n="know.5.body">Spot unplanned purchases and try a 24-hour pause before the next one. Tiny steps that add up.</p>
+          </article>
+
+          <article class="bn-card bn-full reveal">
+            <div class="bn-visual bn-time" aria-hidden="true">
+              <div class="bn-track">
+                <div class="bn-fill"></div>
+                <span class="bn-now"></span>
+                <div class="bn-pin bn-pin-today"><span class="bn-pin-dot"></span><p>Today</p></div>
+                <div class="bn-pin bn-pin-bill"><span class="bn-pin-dot"></span><div class="bn-pin-card"><i data-lucide="smartphone"></i><div><b>Phone plan</b><small>€15.00 · set aside</small></div></div></div>
+                <div class="bn-pin bn-pin-pay"><span class="bn-pin-dot"></span><div class="bn-pin-card bn-pin-card-pay"><i data-lucide="wallet"></i><div><b>Payday</b><small>in 9 days</small></div></div></div>
+              </div>
+            </div>
+            <div class="bn-full-text">
+              <h3 data-i18n="know.6.title">No surprise bills</h3>
+              <p data-i18n="know.6.body">See your upcoming payments before they leave your account. FinSave sets them aside before it shows your safe amount, so a bill never catches you off guard.</p>
+            </div>
+          </article>
         </div>
 
-        <h3 class="straight-title reveal" data-i18n="trust.title">Straight talk</h3>
-        <ul class="trust-row">
-          <li class="reveal"><i data-lucide="ban"></i><span data-i18n="trust.1">No ads</span></li>
-          <li class="reveal"><i data-lucide="link-2-off"></i><span data-i18n="trust.2">No affiliate links in Deals</span></li>
-          <li class="reveal"><i data-lucide="heart-handshake"></i><span data-i18n="trust.3">Your feelings can't be guessed from transactions, so we never pretend to</span></li>
-          <li class="reveal"><i data-lucide="flask-conical"></i><span data-i18n="trust.4">Demo uses example data</span></li>
-        </ul>
-
-        <!-- EDIT: replace with a real quote from a student tester (and their first name / study). -->
-        <figure class="quote card reveal">
-          <i data-lucide="quote" class="quote-icon" aria-hidden="true"></i>
-          <blockquote>
-            <p class="placeholder" data-i18n="quote.text">[Replace with a real quote from a student tester]</p>
-          </blockquote>
-          <figcaption data-i18n="quote.who">[Name, study programme]</figcaption>
+        <figure class="team-quote reveal">
+          <i data-lucide="quote" class="team-quote-icon" aria-hidden="true"></i>
+          <blockquote><p data-i18n="quote.text">“We built FinSave for the week before payday. Not to judge how you spend, but to show you what’s safe, so saving feels possible instead of stressful.”</p></blockquote>
+          <figcaption data-i18n="quote.who">The FinSave team, Inholland University of Applied Sciences</figcaption>
         </figure>
       </div>
     </section>
@@ -231,84 +292,95 @@
             </button>
           </h3>
           <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1">
-            <div class="faq-panel-inner"><p data-i18n="faq.1.a">FinSave is a money app for young adults aged 18–25 in the Netherlands, students first. It shows how much you can safely spend each day and helps you build savings goals and money habits.</p></div>
+            <div class="faq-panel-inner"><p data-i18n="faq.1.a">FinSave is a money app for students and young adults in the Netherlands. It helps you see what you can safely spend each day, save towards your goals and build better money habits, so you don’t run out before payday.</p></div>
           </div>
         </div>
         <div class="faq-item reveal">
           <h3 class="faq-q">
             <button type="button" class="faq-btn" id="faq-btn-2" aria-expanded="false" aria-controls="faq-panel-2">
-              <span data-i18n="faq.2.q">What does “safe to spend” mean?</span>
+              <span data-i18n="faq.2.q">Who is FinSave for?</span>
               <span class="faq-icon" aria-hidden="true"><i data-lucide="plus"></i></span>
             </button>
           </h3>
           <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2">
-            <div class="faq-panel-inner"><p data-i18n="faq.2.a">It’s the amount you can spend today without touching rent, bills or your savings, so your money lasts until payday. In the demo you can see it on the dashboard next to your days to payday.</p></div>
+            <div class="faq-panel-inner"><p data-i18n="faq.2.a">Students and young adults, roughly 18 to 25, who want their money to last the whole month. You don’t need to know anything about budgeting to use it.</p></div>
           </div>
         </div>
         <div class="faq-item reveal">
           <h3 class="faq-q">
             <button type="button" class="faq-btn" id="faq-btn-3" aria-expanded="false" aria-controls="faq-panel-3">
-              <span data-i18n="faq.3.q">Do I need to sign up to try it?</span>
+              <span data-i18n="faq.3.q">Is FinSave a bank?</span>
               <span class="faq-icon" aria-hidden="true"><i data-lucide="plus"></i></span>
             </button>
           </h3>
           <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3">
-            <div class="faq-panel-inner"><p data-i18n="faq.3.a">No. The demo needs no sign-up and runs on example data, so you can click around without entering anything about yourself.</p></div>
+            <div class="faq-panel-inner"><p data-i18n="faq.3.a">No. FinSave isn’t a bank and never holds or moves your money. It’s a tool that helps you plan and keep track of what you earn and spend.</p></div>
           </div>
         </div>
         <div class="faq-item reveal">
           <h3 class="faq-q">
             <button type="button" class="faq-btn" id="faq-btn-4" aria-expanded="false" aria-controls="faq-panel-4">
-              <span data-i18n="faq.4.q">Is the demo my real money?</span>
+              <span data-i18n="faq.4.q">Do I need to sign up to try it?</span>
               <span class="faq-icon" aria-hidden="true"><i data-lucide="plus"></i></span>
             </button>
           </h3>
           <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4">
-            <div class="faq-panel-inner"><p data-i18n="faq.4.a">No. Everything in the demo is example data. It’s there to show you how FinSave works, not to track your actual accounts.</p></div>
+            <div class="faq-panel-inner"><p data-i18n="faq.4.a">No. The demo is open to everyone: no account, no email, no sign-up. Just tap “Try the demo”.</p></div>
           </div>
         </div>
         <div class="faq-item reveal">
           <h3 class="faq-q">
             <button type="button" class="faq-btn" id="faq-btn-5" aria-expanded="false" aria-controls="faq-panel-5">
-              <span data-i18n="faq.5.q">What is the 24-hour pause?</span>
+              <span data-i18n="faq.5.q">Do I need to install anything?</span>
               <span class="faq-icon" aria-hidden="true"><i data-lucide="plus"></i></span>
             </button>
           </h3>
           <div class="faq-panel" id="faq-panel-5" role="region" aria-labelledby="faq-btn-5">
-            <div class="faq-panel-inner"><p data-i18n="faq.5.a">When FinSave spots an unplanned purchase, you can wait 24 hours before the next one. It’s a small habit that helps you spend on purpose, without guilt.</p></div>
+            <div class="faq-panel-inner"><p data-i18n="faq.5.a">No. The demo runs in your browser on your phone or laptop, so there’s nothing to download.</p></div>
           </div>
         </div>
         <div class="faq-item reveal">
           <h3 class="faq-q">
             <button type="button" class="faq-btn" id="faq-btn-6" aria-expanded="false" aria-controls="faq-panel-6">
-              <span data-i18n="faq.6.q">Does FinSave show ads or affiliate links?</span>
+              <span data-i18n="faq.6.q">Is my real money or data used in the demo?</span>
               <span class="faq-icon" aria-hidden="true"><i data-lucide="plus"></i></span>
             </button>
           </h3>
           <div class="faq-panel" id="faq-panel-6" role="region" aria-labelledby="faq-btn-6">
-            <div class="faq-panel-inner"><p data-i18n="faq.6.a">No ads. The Deals section has no affiliate links either.</p></div>
+            <div class="faq-panel-inner"><p data-i18n="faq.6.a">No. The demo runs on example data, so you can click around freely. Please don’t enter real bank details or passwords into it.</p></div>
           </div>
         </div>
         <div class="faq-item reveal">
           <h3 class="faq-q">
             <button type="button" class="faq-btn" id="faq-btn-7" aria-expanded="false" aria-controls="faq-panel-7">
-              <span data-i18n="faq.7.q">Who made FinSave?</span>
+              <span data-i18n="faq.7.q">Does FinSave give financial advice?</span>
               <span class="faq-icon" aria-hidden="true"><i data-lucide="plus"></i></span>
             </button>
           </h3>
           <div class="faq-panel" id="faq-panel-7" role="region" aria-labelledby="faq-btn-7">
-            <div class="faq-panel-inner"><p data-i18n="faq.7.a">A student team at Inholland University of Applied Sciences, built around a validated problem: young adults running out of money before month-end.</p></div>
+            <div class="faq-panel-inner"><p data-i18n="faq.7.a">No. FinSave gives you clear numbers and tools to plan with, but it isn’t personal financial advice. The choices about your money stay yours.</p></div>
           </div>
         </div>
         <div class="faq-item reveal">
           <h3 class="faq-q">
             <button type="button" class="faq-btn" id="faq-btn-8" aria-expanded="false" aria-controls="faq-panel-8">
-              <span data-i18n="faq.8.q">When can I get the full app?</span>
+              <span data-i18n="faq.8.q">Who made FinSave?</span>
               <span class="faq-icon" aria-hidden="true"><i data-lucide="plus"></i></span>
             </button>
           </h3>
           <div class="faq-panel" id="faq-panel-8" role="region" aria-labelledby="faq-btn-8">
-            <div class="faq-panel-inner"><p data-i18n="faq.8.a">Launch details, including pricing, haven’t been announced yet. Leave your email in the box at the bottom of this page and we’ll let you know when FinSave launches.</p></div>
+            <div class="faq-panel-inner"><p data-i18n="faq.8.a">A student team at Inholland University of Applied Sciences, who built it around a problem we kept seeing around us: running out of money before the end of the month.</p></div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <h3 class="faq-q">
+            <button type="button" class="faq-btn" id="faq-btn-9" aria-expanded="false" aria-controls="faq-panel-9">
+              <span data-i18n="faq.9.q">When does FinSave launch, and what will it cost?</span>
+              <span class="faq-icon" aria-hidden="true"><i data-lucide="plus"></i></span>
+            </button>
+          </h3>
+          <div class="faq-panel" id="faq-panel-9" role="region" aria-labelledby="faq-btn-9">
+            <div class="faq-panel-inner"><p data-i18n="faq.9.a">We haven’t announced a launch date or pricing yet. Leave your email at the bottom of this page and we’ll let you know when FinSave launches.</p></div>
           </div>
         </div>
         </div>
