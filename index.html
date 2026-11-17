@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css?v=16" />
+  <link rel="stylesheet" href="assets/styles.css?v=17" />
   <script>document.documentElement.classList.add("js");</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is FinSave?", "acceptedAnswer": {"@type": "Answer", "text": "FinSave is a money app for students and young adults in the Netherlands. It helps you see what you can safely spend each day, save towards your goals and build better money habits, so you don’t run out before payday."}}, {"@type": "Question", "name": "Who is FinSave for?", "acceptedAnswer": {"@type": "Answer", "text": "Students and young adults, roughly 18 to 25, who want their money to last the whole month. You don’t need to know anything about budgeting to use it."}}, {"@type": "Question", "name": "Is FinSave a bank?", "acceptedAnswer": {"@type": "Answer", "text": "No. FinSave isn’t a bank and never holds or moves your money. It’s a tool that helps you plan and keep track of what you earn and spend."}}, {"@type": "Question", "name": "Do I need to sign up to try it?", "acceptedAnswer": {"@type": "Answer", "text": "No. The demo is open to everyone: no account, no email, no sign-up. Just tap “Try the demo”."}}, {"@type": "Question", "name": "Do I need to install anything?", "acceptedAnswer": {"@type": "Answer", "text": "No. The demo runs in your browser on your phone or laptop, so there’s nothing to download."}}, {"@type": "Question", "name": "Is my real money or data used in the demo?", "acceptedAnswer": {"@type": "Answer", "text": "No. The demo runs on example data, so you can click around freely. Please don’t enter real bank details or passwords into it."}}, {"@type": "Question", "name": "Does FinSave give financial advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. FinSave gives you clear numbers and tools to plan with, but it isn’t personal financial advice. The choices about your money stay yours."}}, {"@type": "Question", "name": "Who made FinSave?", "acceptedAnswer": {"@type": "Answer", "text": "A student team at Inholland University of Applied Sciences, who built it around a problem we kept seeing around us: running out of money before the end of the month."}}, {"@type": "Question", "name": "When does FinSave launch, and what will it cost?", "acceptedAnswer": {"@type": "Answer", "text": "We haven’t announced a launch date or pricing yet. Leave your email at the bottom of this page and we’ll let you know when FinSave launches."}}]}</script>
 </head>
@@ -456,10 +456,21 @@
           <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
           <span aria-hidden="true">|</span>
           <a href="terms.html" data-i18n="footer.terms">Terms &amp; Conditions</a>
+          <span aria-hidden="true">|</span>
+          <a href="#" data-open-consent data-i18n="footer.analytics">Analytics settings</a>
         </p>
       </div>
     </div>
   </footer>
+
+  <!-- Analytics consent (Microsoft Clarity loads only after "Allow") -->
+  <div class="consent-bar" id="consent-bar" role="region" aria-label="Analytics consent" hidden>
+    <p><span data-i18n="consent.text">We use Microsoft Clarity to see, anonymously, how people use this page so we can improve it. Okay with you?</span> <a href="privacy.html#analytics" data-i18n="consent.more">Learn more</a></p>
+    <div class="consent-actions">
+      <button type="button" class="consent-btn consent-no" data-consent="no" data-i18n="consent.no">No thanks</button>
+      <button type="button" class="consent-btn consent-yes" data-consent="yes" data-i18n="consent.yes">Allow</button>
+    </div>
+  </div>
 
   <!-- Sticky mobile CTA -->
   <div class="sticky-cta" id="sticky-cta" aria-hidden="true">
@@ -474,5 +485,6 @@
   <script src="assets/main.js?v=7" defer></script>
   <script src="assets/wave.js?v=7" defer></script>
   <script type="module" src="assets/features3d.js?v=6"></script>
+  <script src="assets/analytics.js?v=2" defer></script>
 </body>
 </html>
