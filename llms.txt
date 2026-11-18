@@ -1,0 +1,22 @@
+# FinSave
+
+> FinSave is a money saving and budgeting app for students and young adults (roughly 18 to 25) in the Netherlands. It shows how much you can safely spend each day, helps you save towards goals with a weekly amount, and lets you check whether you can afford something before you buy it. It is a student project made at Inholland University of Applied Sciences.
+
+## Key facts
+- What it is: a money planning tool, not a bank. FinSave never holds or moves money.
+- Who it is for: students and young adults who run out of money before the end of the month. No budgeting knowledge needed.
+- Demo: open to everyone at https://finsavee.lovable.app/ with no account, email or sign-up. It runs in the browser on example data, so nothing needs to be installed.
+- Advice: FinSave gives general money tools and clear numbers. It is not personal financial advice.
+- Launch and pricing: no launch date or price has been announced yet. People can leave their email on the website to hear when it launches.
+
+## Main features
+- Safe to spend: a daily amount you can spend without running short before payday.
+- Savings goals: each goal gets a weekly amount to put aside.
+- Can I afford it?: check a purchase against your plan before you buy.
+- Habits, not guilt: small habits that help money last the whole month.
+
+## Pages
+- [Home](https://finsave-landing-zeta.vercel.app/): what FinSave does, how it works and FAQ
+- [Try the demo](https://finsavee.lovable.app/): the interactive demo with example data
+- [Privacy Policy](https://finsave-landing-zeta.vercel.app/privacy.html)
+- [Terms & Conditions](https://finsave-landing-zeta.vercel.app/terms.html)
